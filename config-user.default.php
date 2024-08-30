@@ -126,4 +126,6 @@ return array (
 	'extensions_enabled' => [],
 	# Extensions configurations
 	'extensions' => [],
+	'ticket' => null,
+	'created_at' => null,
 );

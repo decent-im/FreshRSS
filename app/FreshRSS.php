@@ -73,6 +73,7 @@ class FreshRSS extends Minz_FrontController {
 		if (Minz_Request::isPost()) {
 			if (!FreshRSS_Context::hasSystemConf() || !(FreshRSS_Auth::isCsrfOk() ||
 				(Minz_Request::controllerName() === 'auth' && Minz_Request::actionName() === 'login') ||
+				(Minz_Request::controllerName() === 'customer' && Minz_Request::actionName() === 'checkoutPost') ||
 				(Minz_Request::controllerName() === 'user' && Minz_Request::actionName() === 'create' && !FreshRSS_Auth::hasAccess('admin')) ||
 				(Minz_Request::controllerName() === 'feed' && Minz_Request::actionName() === 'actualize' &&
 					FreshRSS_Context::systemConf()->allow_anonymous_refresh) ||
