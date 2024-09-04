@@ -359,11 +359,13 @@ class FreshRSS_user_Controller extends FreshRSS_ActionController {
 				);
 			}
 
-			if (!self::punchTicket($ticket)) {
-				Minz_Request::bad(
-					_t('user.ticket.invalid'),
-					$badRedirectUrl
-				);
+			if (!FreshRSS_Auth::hasAccess('admin')) {
+				if (!self::punchTicket($ticket)) {
+					Minz_Request::bad(
+						_t('user.ticket.invalid'),
+						$badRedirectUrl
+					);
+				}
 			}
 
 			$ok = self::createUser($new_user_name, $email, $passwordPlain, [
