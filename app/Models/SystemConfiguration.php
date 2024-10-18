@@ -27,6 +27,8 @@ declare(strict_types=1);
  * @property bool $unsafe_autologin_enabled
  * @property array<string> $trusted_sources
  * @property array<string,array<string,mixed>> $extensions
+ * @property-read string $stripe_secret_key
+ * @property-read string $stripe_price_id
  */
 final class FreshRSS_SystemConfiguration extends Minz_Configuration {
 
