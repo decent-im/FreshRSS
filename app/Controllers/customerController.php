@@ -75,6 +75,13 @@ class FreshRSS_customer_Controller extends FreshRSS_ActionController {
 		$session_json = json_encode($checkout_session, JSON_PRETTY_PRINT);
 		error_log($session_json);
 
+		// Make sure we got paid
+		if ($checkout_session->payment_status != 'paid') {
+			error_log('In checkout session ' . $checkout_session_id . ', payment intent status is unexpectedly ' . $checkout_session->payment_status);
+			header($_SERVER["SERVER_PROTOCOL"] . " 400 Checkout session payment status indicates it wasn't paid");
+			exit;
+		}
+
 		// precondition:
 		// checkout_session is a valid object, this means it's genuinely been processed by Stripe
 		// the remote party is buyer's browser
