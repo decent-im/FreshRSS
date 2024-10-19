@@ -45,7 +45,10 @@ class FreshRSS_customer_Controller extends FreshRSS_ActionController {
 			'line_items' => [[
 				'price' => FreshRSS_Context::systemConf()->stripe_price_id,
 				'quantity' => 1,
-			]]
+			]],
+			'subscription_data' => [
+				'trial_period_days' => 30,
+			],
 		]);
 
 		header($_SERVER["SERVER_PROTOCOL"] . " 303 Proceed to payment page");
