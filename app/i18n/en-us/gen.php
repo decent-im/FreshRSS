@@ -44,6 +44,8 @@ return array(
 		'refresh_opml' => 'Refresh OPML',	// IGNORE
 		'remove' => 'Remove',	// IGNORE
 		'rename' => 'Rename',	// IGNORE
+		'report_to_admin' => 'Report to Administrator',
+		'report_first_line' => 'I did something and FreshRSS said:',
 		'see_website' => 'See website',	// IGNORE
 		'submit' => 'Submit',	// IGNORE
 		'truncate' => 'Delete all articles',	// IGNORE
