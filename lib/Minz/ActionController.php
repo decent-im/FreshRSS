@@ -14,6 +14,10 @@ abstract class Minz_ActionController {
 	/** @var array<string,string> */
 	private static array $csp_default = [
 		'default-src' => "'self'",
+		'connect-src' => "'self' https://checkout.stripe.com https://api.stripe.com https://maps.googleapis.com",
+		'frame-src'   => "'self' https://checkout.stripe.com https://*.js.stripe.com https://js.stripe.com https://hooks.stripe.com",
+		'script-src'  => "'self' https://checkout.stripe.com https://*.js.stripe.com https://js.stripe.com https://maps.googleapis.com",
+		'img-src'     => "'self' https://*.stripe.com",
 	];
 
 	/** @var array<string,string> */

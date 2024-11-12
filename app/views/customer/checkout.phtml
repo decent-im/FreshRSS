@@ -1,0 +1,71 @@
+<?php
+	declare(strict_types=1);
+	/** @var FreshRSS_View $this */
+?>
+<main class="post">
+<h1>Newsreader service offering</h1>
+
+<p>A reliable web feed reader service with new features developed here.</p>
+
+<ul>
+<li><strong>Pure information</strong>: never miss new information from the people who have earned your trust, avoid distractions</li>
+<li><strong>No cookies, no dialogs, no ads, more privacy</strong></li>
+<li><strong>Universal: most websites have feeds</strong>. Simply give it the page URL, it will detect the feed</li>
+<li><strong>Mobile-friendly</strong>: native web interface works great and is fast on mobile, also there are many <a href="https://github.com/FreshRSS/FreshRSS#apis--native-apps">mobile apps</a></li>
+<li><strong>Give your eyes some rest, <a href="https://autkin.net/tmp/tts/demo.mp4">listen</a> on the go</strong>, with integrated modern speech synthesizer <a href="https://github.com/rhasspy/piper/">Piper</a> on high settings.</li>
+<li><strong>More than RSS/Atom</strong>: built-in web scraping, also there are handy services providing feeds (<a href="https://kill-the-newsletter.com/">1</a>, <a href="https://hnrss.github.io/">2</a>)</li>
+<li><strong>Freedom from lock-in</strong>: <a href="https://freshrss.org">FreshRSS</a> is easy to host yourself, I will happily support you in migration</li>
+</ul>
+
+<p>I've set it up for myself, it proved to be excellent so I share it with others.<br>
+Take a look at <a href="https://news.decent.im/i/?a=normal&&state=3">my own selection of news sources</a> to get a feel.<br>
+I enjoy
+<a href="https://news.decent.im/i/?get=f_534&&state=3">professional</a> <a href="https://news.decent.im/i/?a=normal&&get=f_542&&state=3">journalism</a>,
+<a href="https://news.decent.im/i/?a=normal&&get=f_316&&state=3">job</a> <a href="https://news.decent.im/i/?a=normal&&get=f_156&&state=3">vacancies</a>,
+<a href="https://news.decent.im/i/?a=normal&&get=f_94&&state=3">podcasts</a>,
+<a href="https://news.decent.im/i/?a=normal&&get=f_482&&state=3">video producers</a>,
+<a href="https://news.decent.im/i/?a=normal&&get=f_332&&state=3">social</a> <a href="https://news.decent.im/i/?get=f_321&&state=3">media</a>,
+<a href="https://news.decent.im/i/?a=normal&&get=f_133&&state=3">blogs</a>,
+<a href="https://news.decent.im/i/?get=f_155&&state=3">comics</a>
+and more.</p>
+
+<p><strong><a href="https://news.decent.im/i/?a=tos">Terms of Service</a></strong>
+|
+<strong><a href="https://billing.stripe.com/p/login/4gw8zd35Ga7dbFC7ss">Manage subscription</a></strong></p>
+
+<p>You get 30 days trial and pay £20 (≈ $26 ≈ €24) per year.<br>
+
+<p>Want to tip?
+<a href="https://decent.im/donate-to-ukraine/">Donate to Ukraine</a>.</p>
+
+<p>You do public interest work?
+<a href="mailto:customer-support@autkin.net?subject=Newsreader account request (public interest work)&body=Hi, I do public interest work at PLACE, where I do JOB since YEAR. Please provide me with an account if you appreciate that.">Get your free account on me</a>.</p>
+
+<?php if (FreshRSS_Auth::hasAccess()) { ?>
+	<table width=100% bgcolor="ffd800"><tr><td><center>
+	<strong>Payment form is hidden because you are logged into your registered account.</strong>
+	<p>Log out or use Incognito browsing mode if you want to register another account.</p>
+	</center></td></tr></table>
+<?php } else { ?>
+	<div id="checkout">
+	<!-- Stripe JS code will insert the payment form here -->
+	</div>
+<?php } ?>
+
+<p>
+<h2>History</h2>
+2023-11-28: offering published
+<br>2024-02-27: Enabled <a href="https://github.com/FreshRSS/Extensions/tree/master/xExtension-YouTube">Youtube</a> extension on customer request
+<br>2024-07-08: Enabled <a href="https://github.com/printfuck/xExtension-Readable">Readable</a> extension on customer request
+<br>2024-08-31: Rolled out completely automated registration
+<br>2024-08-31: Rolled out own development, <a href="https://github.com/decent-im/Extensions">TTS</a> extension
+<br>2024-09-06: Price raised from 10 GBP/yr to 20 GBP/yr to recoup TTS feature development efforts and make more of it possible. Existing customers are not affected.</p>
+
+
+</main>
+
+<?php if (!FreshRSS_Auth::hasAccess()) { ?>
+<footer class="main-footer">
+	<a href="<?= _url('index', 'about') ?>"><?= _t('gen.freshrss.about') ?></a>
+</footer>
+<?php } ?>
