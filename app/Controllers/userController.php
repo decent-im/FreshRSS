@@ -404,7 +404,11 @@ class FreshRSS_user_Controller extends FreshRSS_ActionController {
 			}
 		}
 
-		$redirect_url = ['c' => 'user', 'a' => 'manage'];
+		if (FreshRSS_Auth::hasAccess('admin')) {
+			$redirect_url = ['c' => 'user', 'a' => 'manage'];
+		} else {
+			$redirect_url = ['c' => 'index', 'a' => 'index'];
+		}
 		Minz_Request::forward($redirect_url, true);
 	}
 
