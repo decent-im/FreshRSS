@@ -44,6 +44,8 @@ return array(
 		'refresh_opml' => 'Pārlādēt OPML',
 		'remove' => 'Noņemt',
 		'rename' => 'Pārdēvēt',
+		'report_first_line' => 'I did something and FreshRSS said: ',	// TODO
+		'report_to_admin' => 'Report to administrator',	// TODO
 		'see_website' => 'Skatīt mājaslapu',
 		'submit' => 'Iesniegt',
 		'truncate' => 'Izdzēst visus rakstus',

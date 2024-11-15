@@ -44,6 +44,8 @@ return array(
 		'refresh_opml' => 'Rafraîchir OPML',
 		'remove' => 'Supprimer',
 		'rename' => 'Renommer',
+		'report_first_line' => 'J’ai fait une action et FreshRSS se plaint que : ',
+		'report_to_admin' => 'Rapporter à l’administrateur',
 		'see_website' => 'Voir le site',
 		'submit' => 'Valider',
 		'truncate' => 'Supprimer tous les articles',

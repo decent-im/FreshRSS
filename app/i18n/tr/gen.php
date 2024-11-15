@@ -44,6 +44,8 @@ return array(
 		'refresh_opml' => 'OPML yenile',
 		'remove' => 'Sil',
 		'rename' => 'Yeniden adlandır',
+		'report_first_line' => 'I did something and FreshRSS said: ',	// TODO
+		'report_to_admin' => 'Report to administrator',	// TODO
 		'see_website' => 'Siteyi gör',
 		'submit' => 'Onayla',
 		'truncate' => 'Tüm makaleleri sil',

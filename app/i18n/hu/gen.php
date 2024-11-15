@@ -44,6 +44,8 @@ return array(
 		'refresh_opml' => 'OPML frissítése',
 		'remove' => 'Eltávolít',
 		'rename' => 'Átnevez',
+		'report_first_line' => 'I did something and FreshRSS said: ',	// TODO
+		'report_to_admin' => 'Report to administrator',	// TODO
 		'see_website' => 'Ugrás a forrásra',
 		'submit' => 'Mentés',
 		'truncate' => 'Minden cikk törlése',

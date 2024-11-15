@@ -44,6 +44,8 @@ return array(
 		'refresh_opml' => '更新訂閱源動態列表',
 		'remove' => '刪除',
 		'rename' => '重命名',
+		'report_first_line' => 'I did something and FreshRSS said: ',	// TODO
+		'report_to_admin' => 'Report to administrator',	// TODO
 		'see_website' => '網站中查看',
 		'submit' => '提交',
 		'truncate' => '刪除所有文章',
