@@ -44,6 +44,8 @@ return array(
 		'refresh_opml' => 'Päivitä OPML',
 		'remove' => 'Poista',
 		'rename' => 'Nimeä uudelleen',
+		'report_first_line' => 'I did something and FreshRSS said: ',	// TODO
+		'report_to_admin' => 'Report to administrator',	// TODO
 		'see_website' => 'Siirry sivustolle',
 		'submit' => 'Lähetä',
 		'truncate' => 'Poista kaikki artikkelit',

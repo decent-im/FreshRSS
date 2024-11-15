@@ -44,6 +44,8 @@ return array(
 		'refresh_opml' => 'Refresh OPML',	// TODO
 		'remove' => 'Remove',	// TODO
 		'rename' => 'Rename',	// TODO
+		'report_first_line' => 'I did something and FreshRSS said: ',	// TODO
+		'report_to_admin' => 'Report to administrator',	// TODO
 		'see_website' => 'See website',	// TODO
 		'submit' => 'Submit',	// TODO
 		'truncate' => 'Delete all articles',	// TODO

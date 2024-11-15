@@ -44,6 +44,8 @@ return array(
 		'refresh_opml' => ' OPML را بازخوانی کنید',
 		'remove' => ' حذف کنید',
 		'rename' => ' تغییر نام',
+		'report_first_line' => 'I did something and FreshRSS said: ',	// TODO
+		'report_to_admin' => 'Report to administrator',	// TODO
 		'see_website' => ' به وب سایت مراجعه کنید',
 		'submit' => ' ارسال کنید',
 		'truncate' => ' تمام مقالات را حذف کنید',

@@ -44,6 +44,8 @@ return array(
 		'refresh_opml' => 'Obnoviť OPML',
 		'remove' => 'Odstrániť',
 		'rename' => 'Premenovať',
+		'report_first_line' => 'I did something and FreshRSS said: ',	// TODO
+		'report_to_admin' => 'Report to administrator',	// TODO
 		'see_website' => 'Zobraziť webovú stránku',
 		'submit' => 'Poslať',
 		'truncate' => 'Vymazať všetky články',
