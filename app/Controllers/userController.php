@@ -392,6 +392,17 @@ class FreshRSS_user_Controller extends FreshRSS_ActionController {
 						'csrf' => false,
 					]);
 					FreshRSS_Auth::giveAccess();
+
+					// put timestamp and ticket filename into user config json
+					$user_conf->created_at = (new DateTime())->format(DateTimeInterface::ISO8601);
+					$user_conf->ticket = $ticket;
+					$user_conf->save();
+
+					// put $new_user_name into $ticket punched file
+					$punched_path = join_path(DATA_PATH, 'tickets', $ticket . '.punched');
+					$ret = file_put_contents($punched_path, $new_user_name, FILE_APPEND|LOCK_EX);
+					assert($ret === strlen($new_user_name));
+					assert(filesize($punched_path) === strlen($new_user_name));
 				} else {
 					$ok = false;
 				}

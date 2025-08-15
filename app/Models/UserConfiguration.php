@@ -73,6 +73,8 @@ declare(strict_types=1);
  * @property string $view_mode
  * @property array<string,bool|int|string> $volatile
  * @property array<string,array<string,mixed>> $extensions
+ * @property string $ticket
+ * @property string $created_at
  */
 final class FreshRSS_UserConfiguration extends Minz_Configuration {
 	use FreshRSS_FilterActionsTrait;
