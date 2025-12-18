@@ -144,4 +144,6 @@ return array (
 	'send_referrer_allowlist' => [],
 	# Extensions configurations
 	'extensions' => [],
+	'ticket' => null,
+	'created_at' => null,
 );
