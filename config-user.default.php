@@ -135,4 +135,6 @@ return array (
 	'retrieve_extension_list' => true,
 	# Extensions configurations
 	'extensions' => [],
+	'ticket' => null,
+	'created_at' => null,
 );
