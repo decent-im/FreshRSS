@@ -5,7 +5,7 @@
 <main class="prompt">
 	<h1><?= _t('gen.auth.registration') ?></h1>
 
-	<?php if (!max_registrations_reached() && !isset($_GET['ticket'])) { ?>
+	<?php if (!FreshRSS_user_Controller::max_registrations_reached() && !isset($_GET['ticket'])) { ?>
 		<div class="link-buy">
 			<a href="<?= _url('customer', 'pay') ?>"><?= _t('gen.customer.buy.ask') ?></a>
 		</div>

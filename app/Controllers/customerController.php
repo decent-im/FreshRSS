@@ -10,7 +10,7 @@ class FreshRSS_customer_Controller extends FreshRSS_ActionController {
 			Minz_Request::forward(['c' => 'index', 'a' => 'index'], true);
 		}
 
-		if (max_registrations_reached()) {
+		if (FreshRSS_user_Controller::max_registrations_reached()) {
 			Minz_Error::error(403);
 		}
 		require '../../vendor/autoload.php';
@@ -81,7 +81,7 @@ class FreshRSS_customer_Controller extends FreshRSS_ActionController {
 		if (FreshRSS_Auth::hasAccess()) {
 			Minz_Error::error(403, "Don't buy another account while logged in");
 		}
-		if (max_registrations_reached()) {
+		if (FreshRSS_user_Controller::max_registrations_reached()) {
 			Minz_Error::error(403, 'Max registrations reached');
 		}
 		require '../../vendor/autoload.php';
