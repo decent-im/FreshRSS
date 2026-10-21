@@ -32,6 +32,10 @@ declare(strict_types=1);
  * @property array<string> $trusted_sources
  * @property array<string> $internal_host_allowlist
  * @property array<string,array<string,mixed>> $extensions
+ * @property-read string $stripe_secret_key
+ * @property-read string $stripe_public_key
+ * @property-read string $stripe_price_id
+ * @property string $admin_email
  */
 final class FreshRSS_SystemConfiguration extends Minz_Configuration {
 
