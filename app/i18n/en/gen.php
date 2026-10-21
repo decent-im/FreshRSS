@@ -46,6 +46,8 @@ return array(
 		'refresh_opml' => 'Refresh OPML',
 		'remove' => 'Remove',
 		'rename' => 'Rename',
+		'report_to_admin' => 'Report to Administrator',
+		'report_first_line' => 'I did something and FreshRSS said:',
 		'see_website' => 'See website',
 		'submit' => 'Submit',
 		'truncate' => 'Delete all articles',
@@ -74,6 +76,13 @@ return array(
 		'username' => array(
 			'_' => 'Username',
 			'format' => '<small>1-39 characters: letters, digits, and <code>. _ @ -</code></small>',
+		),
+	),
+	'customer' => array(
+		'buy' => array(
+			'_' => 'Buy an account',
+			'ask' => 'Buy an account?',
+			'title' => 'Buy an account',
 		),
 	),
 	'date' => array(
