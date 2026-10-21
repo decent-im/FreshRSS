@@ -87,6 +87,8 @@ declare(strict_types=1);
  * @property array<string,array<string,mixed>> $extensions
  * @property bool $retrieve_extension_list
  * @property array<string> $send_referrer_allowlist
+ * @property string $ticket
+ * @property string $created_at
  */
 final class FreshRSS_UserConfiguration extends Minz_Configuration {
 	use FreshRSS_FilterActionsTrait;
