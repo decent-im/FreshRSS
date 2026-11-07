@@ -15,7 +15,13 @@ async function initialize() {
 	const fetchClientSecret = async () => {
 		const response = await fetch("./?c=customer&a=checkoutPost", {
 			method: "POST",
-			headers: new Headers({ 'content-type': 'application/json' }),
+			headers: {
+				'Accept': 'application/json',
+				'Content-Type': 'application/json; charset=UTF-8',
+			},
+			body: JSON.stringify({
+				'_csrf': context.csrf,
+			}),
 		});
 		const { clientSecret } = await response.json();
 		return clientSecret;
