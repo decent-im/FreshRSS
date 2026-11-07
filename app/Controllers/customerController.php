@@ -99,7 +99,7 @@ class FreshRSS_customer_Controller extends FreshRSS_ActionController {
 		$checkout_session = \Stripe\Checkout\Session::create([
 			'return_url' => $return_url . '&session_id={CHECKOUT_SESSION_ID}',
 			'mode' => 'subscription',
-			'ui_mode' => 'embedded',
+			'ui_mode' => 'embedded_page',
 			'line_items' => [[
 				'price' => FreshRSS_Context::systemConf()->stripe_price_id,
 				'quantity' => 1,
