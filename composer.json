@@ -35,7 +35,8 @@
 		"ext-xml": "*",
 		"ext-zend-opcache": "*",
 		"ext-zip": "*",
-		"ext-zlib": "*"
+		"ext-zlib": "*",
+		"stripe/stripe-php": "^23.1"
 	},
 	"suggest": {
 		"ext-iconv": "*",

@@ -270,4 +270,9 @@ return [
 	#
 	# Setting * disables this check completely, allowing any host to be accessed (unsafe)
 	'internal_host_allowlist' => [],
+
+	# stripe_secret_key must have "Checkout Sessions" Write permission, nothing else is needed.
+	'stripe_secret_key' => '',
+	'stripe_public_key' => '',
+	'stripe_price_id' => '',
 ];

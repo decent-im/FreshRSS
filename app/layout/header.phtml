@@ -13,6 +13,10 @@
 				}
 			?>
 		</a>
+	<?php if (!FreshRSS_Auth::hasAccess() && FreshRSS_Context::systemConf()->allow_anonymous) { ?>
+	<a href="<?= Minz_Url::display(['c' => 'customer', 'a' => 'checkout'], 'html', 'root') ?>">Get&nbsp;your&nbsp;account</a>
+	<?php } ?>
+
 	</div>
 
 	<div class="item search">
